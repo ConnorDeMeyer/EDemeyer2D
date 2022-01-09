@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Engine Files">
+      <UniqueIdentifier>{5c12112b-56ad-48be-bac5-b90b3851aec0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine Files\Components">
+      <UniqueIdentifier>{b2cc847e-e684-4e86-9fea-bb0168dc3ce8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine Files\Singletons">
+      <UniqueIdentifier>{ea944db7-7bd8-4470-ab95-f5d5ed0d0f58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine Files\Objects">
+      <UniqueIdentifier>{bdbc6458-f6ea-4ec3-a399-c1bba343f89e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine Files\Scenes">
+      <UniqueIdentifier>{d7bfbbe8-a61d-463a-85d0-c01bd5d64961}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine Files\Math Files">
+      <UniqueIdentifier>{20fdcb3f-fc57-4bc5-84c2-d8f0c612524a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine Files\Components\CollisionComponents">
+      <UniqueIdentifier>{af307572-e06f-4a1f-a8b1-9a7989029559}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine Files\Components\VisualComponents">
+      <UniqueIdentifier>{e10de71a-c666-47bd-9a21-8259c095141c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine Files\Misc">
+      <UniqueIdentifier>{18ee3575-4f17-4ab9-a710-8971c03794a9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Resource.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Structs.h">
+      <Filter>Engine Files\Math Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector.h">
+      <Filter>Engine Files\Math Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IComponent.h">
+      <Filter>Engine Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="DrawingManager.h">
+      <Filter>Engine Files\Singletons</Filter>
+    </ClInclude>
+    <ClInclude Include="GameEngine.h">
+      <Filter>Engine Files\Singletons</Filter>
+    </ClInclude>
+    <ClInclude Include="InputManager.h">
+      <Filter>Engine Files\Singletons</Filter>
+    </ClInclude>
+    <ClInclude Include="IObject.h">
+      <Filter>Engine Files\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>Engine Files\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceManager.h">
+      <Filter>Engine Files\Singletons</Filter>
+    </ClInclude>
+    <ClInclude Include="FPSDisplay.h">
+      <Filter>Engine Files\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="CircleCollision.h">
+      <Filter>Engine Files\Components\CollisionComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="ICollisionComponent.h">
+      <Filter>Engine Files\Components\CollisionComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="BoxCollision.h">
+      <Filter>Engine Files\Components\CollisionComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="PolygonCollision.h">
+      <Filter>Engine Files\Components\CollisionComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="PhysicsManager.h">
+      <Filter>Engine Files\Singletons</Filter>
+    </ClInclude>
+    <ClInclude Include="Sprite.h">
+      <Filter>Engine Files\Components\VisualComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="Text.h">
+      <Filter>Engine Files\Components\VisualComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="IBaseClass.h">
+      <Filter>Engine Files\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="Bitmap.h">
+      <Filter>Engine Files\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>Engine Files\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="GameInstance.h">
+      <Filter>Engine Files\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>Engine Files\Components\VisualComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="Collision.h">
+      <Filter>Engine Files\Math Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Delegates.h">
+      <Filter>Engine Files\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioComponent.h">
+      <Filter>Engine Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioBuffer.h">
+      <Filter>Engine Files\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="ClickableButton.h">
+      <Filter>Engine Files\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="FileDialog.h">
+      <Filter>Engine Files\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="IDialogBox.h">
+      <Filter>Engine Files\Misc</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="IComponent.cpp">
+      <Filter>Engine Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="DrawingManager.cpp">
+      <Filter>Engine Files\Singletons</Filter>
+    </ClCompile>
+    <ClCompile Include="GameEngine.cpp">
+      <Filter>Engine Files\Singletons</Filter>
+    </ClCompile>
+    <ClCompile Include="InputManager.cpp">
+      <Filter>Engine Files\Singletons</Filter>
+    </ClCompile>
+    <ClCompile Include="IObject.cpp">
+      <Filter>Engine Files\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>Engine Files\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceManager.cpp">
+      <Filter>Engine Files\Singletons</Filter>
+    </ClCompile>
+    <ClCompile Include="FPSDisplay.cpp">
+      <Filter>Engine Files\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="CircleCollision.cpp">
+      <Filter>Engine Files\Components\CollisionComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="ICollisionComponent.cpp">
+      <Filter>Engine Files\Components\CollisionComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="BoxCollision.cpp">
+      <Filter>Engine Files\Components\CollisionComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="PolygonCollision.cpp">
+      <Filter>Engine Files\Components\CollisionComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="PhysicsManager.cpp">
+      <Filter>Engine Files\Singletons</Filter>
+    </ClCompile>
+    <ClCompile Include="Sprite.cpp">
+      <Filter>Engine Files\Components\VisualComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="Text.cpp">
+      <Filter>Engine Files\Components\VisualComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="Bitmap.cpp">
+      <Filter>Engine Files\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="IBaseClass.cpp">
+      <Filter>Engine Files\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="GameInstance.cpp">
+      <Filter>Engine Files\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>Engine Files\Components\VisualComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioComponent.cpp">
+      <Filter>Engine Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioBuffer.cpp">
+      <Filter>Engine Files\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="ClickableButton.cpp">
+      <Filter>Engine Files\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="IDialogBox.cpp">
+      <Filter>Engine Files\Misc</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="EDemeyer2D.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="small.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="EDemeyer2D.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

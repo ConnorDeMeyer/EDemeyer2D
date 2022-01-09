@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EDemeyer2D", "EDemeyer2D\EDemeyer2D.vcxproj", "{7EE7C6E0-DF7C-4821-A674-00AE18D6C429}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Frogger", "Frogger\Frogger.vcxproj", "{D71A8F48-D597-443C-BF14-E1783D91F5E8}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7EE7C6E0-DF7C-4821-A674-00AE18D6C429} = {7EE7C6E0-DF7C-4821-A674-00AE18D6C429}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Nonogram Solver", "Nonogram Solver\Nonogram Solver.vcxproj", "{341D21CD-E8B1-48E5-8D9E-D7768C422043}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7EE7C6E0-DF7C-4821-A674-00AE18D6C429}.Debug|x64.ActiveCfg = Debug|x64
+		{7EE7C6E0-DF7C-4821-A674-00AE18D6C429}.Debug|x64.Build.0 = Debug|x64
+		{7EE7C6E0-DF7C-4821-A674-00AE18D6C429}.Debug|x86.ActiveCfg = Debug|Win32
+		{7EE7C6E0-DF7C-4821-A674-00AE18D6C429}.Debug|x86.Build.0 = Debug|Win32
+		{7EE7C6E0-DF7C-4821-A674-00AE18D6C429}.Release|x64.ActiveCfg = Release|x64
+		{7EE7C6E0-DF7C-4821-A674-00AE18D6C429}.Release|x64.Build.0 = Release|x64
+		{7EE7C6E0-DF7C-4821-A674-00AE18D6C429}.Release|x86.ActiveCfg = Release|Win32
+		{7EE7C6E0-DF7C-4821-A674-00AE18D6C429}.Release|x86.Build.0 = Release|Win32
+		{D71A8F48-D597-443C-BF14-E1783D91F5E8}.Debug|x64.ActiveCfg = Debug|x64
+		{D71A8F48-D597-443C-BF14-E1783D91F5E8}.Debug|x64.Build.0 = Debug|x64
+		{D71A8F48-D597-443C-BF14-E1783D91F5E8}.Debug|x86.ActiveCfg = Debug|Win32
+		{D71A8F48-D597-443C-BF14-E1783D91F5E8}.Debug|x86.Build.0 = Debug|Win32
+		{D71A8F48-D597-443C-BF14-E1783D91F5E8}.Release|x64.ActiveCfg = Release|x64
+		{D71A8F48-D597-443C-BF14-E1783D91F5E8}.Release|x64.Build.0 = Release|x64
+		{D71A8F48-D597-443C-BF14-E1783D91F5E8}.Release|x86.ActiveCfg = Release|Win32
+		{D71A8F48-D597-443C-BF14-E1783D91F5E8}.Release|x86.Build.0 = Release|Win32
+		{341D21CD-E8B1-48E5-8D9E-D7768C422043}.Debug|x64.ActiveCfg = Debug|x64
+		{341D21CD-E8B1-48E5-8D9E-D7768C422043}.Debug|x64.Build.0 = Debug|x64
+		{341D21CD-E8B1-48E5-8D9E-D7768C422043}.Debug|x86.ActiveCfg = Debug|Win32
+		{341D21CD-E8B1-48E5-8D9E-D7768C422043}.Debug|x86.Build.0 = Debug|Win32
+		{341D21CD-E8B1-48E5-8D9E-D7768C422043}.Release|x64.ActiveCfg = Release|x64
+		{341D21CD-E8B1-48E5-8D9E-D7768C422043}.Release|x64.Build.0 = Release|x64
+		{341D21CD-E8B1-48E5-8D9E-D7768C422043}.Release|x86.ActiveCfg = Release|Win32
+		{341D21CD-E8B1-48E5-8D9E-D7768C422043}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F6077116-EB93-41B7-9AC1-2F08A86240E7}
+	EndGlobalSection
+EndGlobal

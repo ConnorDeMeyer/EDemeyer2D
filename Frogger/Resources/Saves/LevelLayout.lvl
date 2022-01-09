@@ -1,0 +1,18 @@
+# Frogger Levels File
+l 1 N3 N3 N3 F1 N2 D4 S3 L2 D4 M3
+l 2 N4 N4 N3 F2 N3 D3 S3 L1 D4 M3
+l 3 N4 N4 N5 S2 N3 D3 S3 L1 D4 M2
+l 4 N4 N4 N4 F3 N4 D3 S2 L1 D3 M2
+l 5 N5 N4 N5 S4 N3 D2 S2 L1 D3 C1
+# Levels get repeated every 5 levels with some changes
+# Legend:
+# N normal car
+# F fast car
+# S small car/log
+# M medium log
+# L long log
+# C number of crocodiles
+# D turtles
+# The crocodile appears randomly in one of the homes.  
+# Snakes appear randomly in either the median, log, or both places.
+# The otter appears randomly on any of the water lanes.
