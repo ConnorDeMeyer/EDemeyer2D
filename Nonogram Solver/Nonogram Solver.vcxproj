@@ -162,7 +162,6 @@
     <ClCompile Include="GameInstance_Nonogram.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Nonogram.cpp" />
-    <ClCompile Include="NonogramStructs.cpp" />
     <ClCompile Include="Scene_NonogramVisual.cpp" />
   </ItemGroup>
   <ItemGroup>

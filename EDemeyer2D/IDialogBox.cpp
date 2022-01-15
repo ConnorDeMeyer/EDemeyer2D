@@ -101,7 +101,7 @@ InputStringDialog::~InputStringDialog()
 
 	if (!UnregisterClass(_T("InputStringDialog"), ENGINE->GetHInstance())) {
 		LPVOID lpMsgBuf;
-		LPVOID lpDisplayBuf;
+		//LPVOID lpDisplayBuf;
 		DWORD dw = GetLastError();
 
 		FormatMessage(

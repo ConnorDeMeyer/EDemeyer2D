@@ -5,6 +5,26 @@
 
 struct AudioBufferFormated
 {
+	AudioBufferFormated(XAUDIO2_BUFFER _buffer, WAVEFORMATEXTENSIBLE _format)
+		: buffer{ _buffer }
+		, format{ _format }
+	{}
+
+	AudioBufferFormated()
+		: buffer{}
+		, format{}
+	{}
+
+	virtual ~AudioBufferFormated()
+	{
+		delete buffer.pAudioData;
+	}
+
+	AudioBufferFormated(const AudioBufferFormated& other) = delete;
+	AudioBufferFormated& operator=(const AudioBufferFormated& other) = delete;
+	AudioBufferFormated(AudioBufferFormated&& other) = delete;
+	AudioBufferFormated& operator=(AudioBufferFormated&& other) = delete;
+
 	XAUDIO2_BUFFER buffer;
 	WAVEFORMATEXTENSIBLE format;
 };
@@ -16,6 +36,7 @@ class AudioBuffer final
 public:
 
 	AudioBuffer() = default;
+	~AudioBuffer() = default;
 	AudioBuffer(const tstring& pathName);
 	AudioBuffer(AudioBufferFormated* buffer);
 	AudioBuffer(std::shared_ptr<AudioBufferFormated> sharedBuffer);

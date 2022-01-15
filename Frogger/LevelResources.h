@@ -53,6 +53,8 @@ private:
 
 	Texture* m_pFrogGoals[5]{};
 
+	class AudioComponent* m_pMusic{};
+
 	Bitmap m_ResourceTexture;
 
 	float m_RemainingTime{};

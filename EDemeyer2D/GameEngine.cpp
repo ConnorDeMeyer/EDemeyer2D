@@ -195,8 +195,8 @@ void GameEngine::RunGame(GameInstance* pGameInstance)
             auto afterGameLoopTime = std::chrono::high_resolution_clock::now();
             auto gameLoopTime = std::chrono::duration<double>(afterGameLoopTime - m_CurrentTime).count();
             auto timeToWait = m_TargetFps - gameLoopTime;
-            if (timeToWait > 0)
-                std::this_thread::sleep_for(std::chrono::duration<double>(timeToWait));
+            //if (timeToWait > 0)
+            //    std::this_thread::sleep_for(std::chrono::duration<double>(timeToWait));
         }
 
         //WaitMessage();

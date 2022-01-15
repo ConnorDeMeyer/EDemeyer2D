@@ -7,6 +7,7 @@
 #include "Player.h"
 #include "Scene_Level.h"
 #include "framework.h"
+#include "AudioComponent.h"
 
 LevelResources::LevelResources()
 {
@@ -19,27 +20,32 @@ LevelResources::LevelResources()
 
 	m_p1Up = new Text(_T("1-UP"), fontName, 12.f, weight);
 	m_p1Up->SetColor(FColor{ 0,0.765f, 0.851f, 1.f });
-	m_p1Up->SetLocalPosition({ 64.f,-2.f });
+	m_p1Up->SetLocalPosition({ 76.f,4.f });
+	m_p1Up->SetTextAlignment(DWRITE_TEXT_ALIGNMENT_CENTER);
 	AddComponent(m_p1Up);
 
 	m_pHiScore = new Text(_T("HI-SCORE"), fontName, 12.f, weight);
 	m_pHiScore->SetColor(FColor{ 0,0.765f, 0.851f, 1.f });
-	m_pHiScore->SetLocalPosition({ 128.f,-2.f });
+	m_pHiScore->SetLocalPosition({ 140.f,4.f });
+	m_pHiScore->SetTextAlignment(DWRITE_TEXT_ALIGNMENT_CENTER);
 	AddComponent(m_pHiScore);
 
 	m_pCurrentScore = new Text(_T("00000"), fontName, 12.f, weight);
 	m_pCurrentScore->SetColor(FColor{ 0.878f, 0, 0, 1.f });
-	m_pCurrentScore->SetLocalPosition({ 64.f,8 });
+	m_pCurrentScore->SetLocalPosition({ 76,14 });
+	m_pCurrentScore->SetTextAlignment(DWRITE_TEXT_ALIGNMENT_CENTER);
 	AddComponent(m_pCurrentScore);
 
 	m_pHiScoreValue = new Text(_T("00000"), fontName, 12.f, weight);
 	m_pHiScoreValue->SetColor(FColor{ 0.878f, 0, 0, 1.f });
-	m_pHiScoreValue->SetLocalPosition({ 128.f,8 });
+	m_pHiScoreValue->SetLocalPosition({ 140,14 });
+	m_pHiScoreValue->SetTextAlignment(DWRITE_TEXT_ALIGNMENT_CENTER);
 	AddComponent(m_pHiScoreValue);
 
 	m_pTimeText = new Text(_T("TIME"), fontName, 12.f, weight);
 	m_pTimeText->SetColor(FColor{ 0.878f, 0.878f, 0, 1.f });
-	m_pTimeText->SetLocalPosition({ 192.f,240.f });
+	m_pTimeText->SetLocalPosition({ 204.f,246.f });
+	m_pTimeText->SetTextAlignment(DWRITE_TEXT_ALIGNMENT_CENTER);
 	AddComponent(m_pTimeText);
 
 	m_LiveTextures.reserve(m_Lives);
@@ -75,6 +81,11 @@ LevelResources::LevelResources()
 				}
 			});
 	}
+
+	m_pMusic = new AudioComponent(_T("Resources/Audio/frogger-music.wav"));
+	m_pMusic->SetLoopInterval(2.4f, 5.75f);
+	m_pMusic->Play();
+	AddComponent(m_pMusic);
 
 }
 

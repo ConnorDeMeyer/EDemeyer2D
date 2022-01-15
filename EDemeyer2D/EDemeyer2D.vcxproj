@@ -184,6 +184,7 @@
     <ClInclude Include="Resource.h" />
     <ClInclude Include="Text.h" />
     <ClInclude Include="Texture.h" />
+    <ClInclude Include="TimeLineComponent.h" />
     <ClInclude Include="Vector.h" />
   </ItemGroup>
   <ItemGroup>
@@ -211,6 +212,7 @@
     <ClCompile Include="Sprite.cpp" />
     <ClCompile Include="Text.cpp" />
     <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="TimeLineComponent.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="EDemeyer2D.rc" />

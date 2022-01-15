@@ -14,7 +14,7 @@ using namespace std::placeholders;
 
 Scene_NonogramVisual::Scene_NonogramVisual()
 {
-	SetNonogram(new Nonogram(L"nonograms/15x15_Mous.nono"));
+	SetNonogram(new Nonogram(10, 10));
 
 	m_pWriteFactory = DRAW->GetWriteFactory();
 

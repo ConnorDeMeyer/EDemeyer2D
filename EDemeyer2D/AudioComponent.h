@@ -13,8 +13,9 @@ public:
     virtual ~AudioComponent();
 
     void Play();
-    void Pause();
-    void Resume();
+    void Stop();
+
+    void SetLoopInterval(float startSecond, float endSecond);
 
 protected:
 

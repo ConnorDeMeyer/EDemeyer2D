@@ -38,7 +38,12 @@ void Scene::Update(float deltaTime)
 {
 	IBaseClass::Update(deltaTime);
 
-	std::sort(m_Objects.begin(), m_Objects.end(), [](IObject* p0, IObject* p1) {return p0->GetDrawingOrder() > p1->GetDrawingOrder(); });
+	auto sortingLambda = [](IObject* p0, IObject* p1) {return p0->GetDrawingOrder() > p1->GetDrawingOrder(); };
+
+	auto startSort = std::is_sorted_until(m_Objects.begin(), m_Objects.end(), sortingLambda);
+	//auto endSort = std::is_sorted_until(m_Objects.rbegin(), std::make_reverse_iterator(startSort), sortingLambda);
+
+	std::sort(startSort, m_Objects.end(), sortingLambda);
 
 	for (IObject* pObject : m_Objects)
 		if (pObject->IsActive()) pObject->Update(deltaTime);

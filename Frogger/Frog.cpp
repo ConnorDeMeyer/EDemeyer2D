@@ -7,6 +7,7 @@
 #include "GameInstance_Frogger.h"
 #include "Collision.h"
 #include "framework.h"
+#include "AudioComponent.h"
 
 Frog::Frog()
 {
@@ -28,6 +29,13 @@ Frog::Frog()
 	m_pBoxCollision = new BoxCollision();
 	m_pBoxCollision->SetBoundingRect({ -TILE_DIM * 0.5f + 3.f,-TILE_DIM * 0.5f + 3.f,TILE_DIM * 0.5f - 3.f,TILE_DIM * 0.5f - 3.f});
 	AddComponent(m_pBoxCollision);
+
+	m_pJumpSound = new AudioComponent(_T("Resources/Audio/sound-frogger-hop.wav"));
+	AddComponent(m_pJumpSound);
+
+	m_pDeathSound = new AudioComponent(_T("Resources/Audio/sound-frogger-squash.wav"));
+	OnFrogDeath.BindFunction(this, [this]() {m_pDeathSound->Play(); });
+	AddComponent(m_pDeathSound);
 
 	SetDrawingOrder(10);
 
@@ -56,6 +64,8 @@ void Frog::Update(float deltaTime)
 void Frog::MoveDirection(eMovementDirection direction)
 {
 	if (!m_bCanMove || m_MoveCouldown > 0.f) return;
+
+	m_pJumpSound->Play();
 
 	FVector2 direction2{};
 	switch (direction)

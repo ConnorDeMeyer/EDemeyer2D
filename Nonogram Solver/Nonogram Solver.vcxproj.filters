@@ -33,9 +33,6 @@
     <ClCompile Include="Scene_NonogramVisual.cpp">
       <Filter>ProjectFiles</Filter>
     </ClCompile>
-    <ClCompile Include="NonogramStructs.cpp">
-      <Filter>ProjectFiles</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameInstance_Nonogram.h">

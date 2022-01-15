@@ -124,6 +124,9 @@
     <ClInclude Include="IDialogBox.h">
       <Filter>Engine Files\Misc</Filter>
     </ClInclude>
+    <ClInclude Include="TimeLineComponent.h">
+      <Filter>Engine Files\Components</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="IComponent.cpp">
@@ -195,6 +198,9 @@
     </ClCompile>
     <ClCompile Include="IDialogBox.cpp">
       <Filter>Engine Files\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeLineComponent.cpp">
+      <Filter>Engine Files\Components</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

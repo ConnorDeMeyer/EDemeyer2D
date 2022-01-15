@@ -6,6 +6,7 @@
 class Texture;
 class Sprite;
 class BoxCollision;
+class AudioComponent;
 
 enum class eMovementDirection : UINT8{
     up,
@@ -53,6 +54,8 @@ private:
     Texture* m_pFrogTexture = {};
     Sprite* m_pDeathSprite = {};
     BoxCollision* m_pBoxCollision = {};
+    AudioComponent* m_pJumpSound = {};
+    AudioComponent* m_pDeathSound = {};
 
     float m_MoveCouldown = {};
 

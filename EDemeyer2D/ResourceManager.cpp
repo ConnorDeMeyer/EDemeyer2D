@@ -216,7 +216,7 @@ AudioBuffer ResourceManager::LoadAudio(const tstring& pathName)
 		if (!weakBitmapPtr.expired()) return AudioBuffer(weakBitmapPtr.lock());
 	}
 
-	AudioBufferFormated Audiobuffer{};
+	AudioBufferFormated* Audiobuffer{ new AudioBufferFormated() };
 
 	HANDLE hFile = CreateFile(
 		pathName.c_str(),
@@ -231,8 +231,8 @@ AudioBuffer ResourceManager::LoadAudio(const tstring& pathName)
 
 	if (SetFilePointer(hFile, 0, NULL, FILE_BEGIN) == INVALID_SET_FILE_POINTER) throw FileNotFoundException();
 
-	DWORD dwChunkSize;
-	DWORD dwChunkPosition;
+	DWORD dwChunkSize{};
+	DWORD dwChunkPosition{};
 	//check the file type, should be fourccWAVE or 'XWMA'
 	FindChunk(hFile, fourccRIFF, dwChunkSize, dwChunkPosition);
 	DWORD filetype;
@@ -240,18 +240,18 @@ AudioBuffer ResourceManager::LoadAudio(const tstring& pathName)
 	assert(filetype == fourccWAVE);
 
 	FindChunk(hFile, fourccFMT, dwChunkSize, dwChunkPosition);
-	ReadChunkData(hFile, &Audiobuffer.format, dwChunkSize, dwChunkPosition);
+	ReadChunkData(hFile, &Audiobuffer->format, dwChunkSize, dwChunkPosition);
 
 	//fill out the audio data buffer with the contents of the fourccDATA chunk
 	FindChunk(hFile, fourccDATA, dwChunkSize, dwChunkPosition);
 	BYTE* pDataBuffer = new BYTE[dwChunkSize];
 	ReadChunkData(hFile, pDataBuffer, dwChunkSize, dwChunkPosition);
 
-	Audiobuffer.buffer.AudioBytes = dwChunkSize;  //size of the audio buffer in bytes
-	Audiobuffer.buffer.pAudioData = pDataBuffer;  //buffer containing audio data
-	Audiobuffer.buffer.Flags = XAUDIO2_END_OF_STREAM; // tell the source voice not to expect any data after this buffer
+	Audiobuffer->buffer.AudioBytes = dwChunkSize;  //size of the audio buffer in bytes
+	Audiobuffer->buffer.pAudioData = pDataBuffer;  //buffer containing audio data
+	Audiobuffer->buffer.Flags = XAUDIO2_END_OF_STREAM; // tell the source voice not to expect any data after this buffer
 
-	auto bufferWrapper = AudioBuffer(std::make_shared<AudioBufferFormated>(Audiobuffer));
+	auto bufferWrapper = AudioBuffer(std::shared_ptr<AudioBufferFormated>(Audiobuffer));
 	m_AudioBuffers.push_back(std::weak_ptr<AudioBufferFormated>(bufferWrapper.m_pAudioBuffer));
 
 	return bufferWrapper;
