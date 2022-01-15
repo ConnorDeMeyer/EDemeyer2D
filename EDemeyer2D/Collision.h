@@ -15,3 +15,8 @@ inline bool IsOverlapping(const FPoint2& point, const FRect& rect)
 {
 	return !(point.x < rect.left || point.y < rect.top || point.x > rect.right || point.y > rect.bottom);
 }
+
+inline bool IsOverlapping(const FPoint2& circleCenter0, float radius0, const FPoint2& circleCenter1, float radius1)
+{
+	return (SqrDistance(circleCenter0, circleCenter1) < Square(radius0 + radius1));
+}

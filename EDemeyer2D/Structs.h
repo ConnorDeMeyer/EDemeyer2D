@@ -46,3 +46,9 @@ struct FlipFlop
 		return !val;
 	}
 };
+
+template <typename T>
+inline T Square(const T& value)
+{
+	return T * T;
+}
