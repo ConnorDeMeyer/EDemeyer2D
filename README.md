@@ -25,4 +25,4 @@ Some examples of components are:
 
 This is a basic example of what can be done with the engine
 
-![Frogger Example](https://www.youtube.com/embed/HtnJJ3tgXGw)
+[![Frogger Example](https://img.youtube.com/vi/HtnJJ3tgXGw/0.jpg)](https://www.youtube.com/watch?v=HtnJJ3tgXGw)
