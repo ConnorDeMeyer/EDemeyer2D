@@ -11,6 +11,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Frogger", "Frogger\Frogger.
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Nonogram Solver", "Nonogram Solver\Nonogram Solver.vcxproj", "{341D21CD-E8B1-48E5-8D9E-D7768C422043}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7EE7C6E0-DF7C-4821-A674-00AE18D6C429} = {7EE7C6E0-DF7C-4821-A674-00AE18D6C429}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

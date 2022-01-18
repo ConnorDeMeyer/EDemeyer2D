@@ -36,6 +36,17 @@ typedef D2D1_SIZE_U USize;
 #define SafeDelete(pointer) if (pointer) {delete pointer; pointer = nullptr;}
 #define SafeDestroyWindow(hWnd) if (hWnd) {DestroyWindow(hWnd); hWnd = nullptr;}
 
+// Circle struct
+template <typename T>
+struct Circle
+{
+	Vector2<T> center;
+	T radius;
+};
+
+typedef Circle<float> FCircle;
+typedef Circle<double> DCircle;
+
 struct FlipFlop
 {
 	bool val = true;
@@ -50,5 +61,5 @@ struct FlipFlop
 template <typename T>
 inline T Square(const T& value)
 {
-	return T * T;
+	return value * value;
 }

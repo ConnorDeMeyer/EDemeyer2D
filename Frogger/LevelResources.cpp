@@ -82,10 +82,10 @@ LevelResources::LevelResources()
 			});
 	}
 
-	m_pMusic = new AudioComponent(_T("Resources/Audio/frogger-music.wav"));
-	m_pMusic->SetLoopInterval(2.4f, 5.75f);
-	m_pMusic->Play();
-	AddComponent(m_pMusic);
+	//m_pMusic = new AudioComponent(_T("Resources/Audio/frogger-music.wav"));
+	//m_pMusic->SetLoopInterval(2.4f, 5.75f);
+	//m_pMusic->Play();
+	//AddComponent(m_pMusic);
 
 }
 
