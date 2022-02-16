@@ -10,6 +10,7 @@ It is powered by win32 and Direct2D and includes the following features:
   - Automatically cleans up destroyed instances of added components
   - A resource manager that loads bitmaps and only unloads them when they are not in use anymore. Also doesn't load resources more than once
   - An Input system where the user can link keys, buttons and controllers to functions.
+  - Begin and End overlap events for collisions
   
 The engine also cleans up every scene, objects and components that the user makes.
 
