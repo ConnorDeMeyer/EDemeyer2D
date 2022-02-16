@@ -96,6 +96,10 @@ public:
 
 	virtual void OnOverlapObject(IObject* other, ICollisionComponent* component = nullptr, ICollisionComponent* otherComponent = nullptr) {};
 
+	virtual void OnBeginOverlap(IObject* other) {};
+
+	virtual void OnEndOverlap(IObject* other) {};
+
 	void DestroyFlaggedComponents();
 
 private:

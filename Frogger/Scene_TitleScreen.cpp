@@ -2,16 +2,24 @@
 #include "ResourceManager.h"
 #include "DrawingManager.h"
 #include "Frog.h"
+#include "Car.h"
+#include "Player.h"
 
 Scene_TitleScreen::Scene_TitleScreen()
 {
-	Frog* pFrog{ new Frog() };
-	pFrog->SetPosition({ 20,20 });
+	Frog* pFrog{ new Player() };
+	pFrog->SetPosition({ 100,130 });
 	AddObjectToScene(pFrog);
-}
 
-Scene_TitleScreen::~Scene_TitleScreen()
-{
+	Car* pCar{ new Car() };
+	pCar->SetPosition({ 100,100 });
+	pCar->SetMovementSpeed(-10.f);
+	AddObjectToScene(pCar);
+
+	pCar = new Car();
+	pCar->SetPosition({ 130,100 });
+	pCar->SetMovementSpeed(-10.f);
+	AddObjectToScene(pCar);
 }
 
 void Scene_TitleScreen::Draw(const FVector2& windowSize) const

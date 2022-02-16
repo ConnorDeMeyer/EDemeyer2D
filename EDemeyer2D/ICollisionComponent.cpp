@@ -1,4 +1,15 @@
 #include "ICollisionComponent.h"
+#include "PhysicsManager.h"
+
+ICollisionComponent::ICollisionComponent()
+{
+	PHYSICS->RegisterCollisionComp(this);
+}
+
+ICollisionComponent::~ICollisionComponent()
+{
+	PHYSICS->RemoveCollisionComp(this);
+}
 
 FRect ICollisionComponent::GetWorldBoundingRect() const
 {

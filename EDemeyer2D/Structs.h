@@ -36,6 +36,11 @@ typedef D2D1_SIZE_U USize;
 #define SafeDelete(pointer) if (pointer) {delete pointer; pointer = nullptr;}
 #define SafeDestroyWindow(hWnd) if (hWnd) {DestroyWindow(hWnd); hWnd = nullptr;}
 
+#ifndef Clamp
+#define Clamp(value, minValue, maxValue) (min(max(value, minValue), maxValue))
+#endif // !Clamp
+
+
 // Circle struct
 template <typename T>
 struct Circle

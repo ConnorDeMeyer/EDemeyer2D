@@ -6,7 +6,7 @@
 class PolygonCollision final : public ICollisionComponent
 {
 public:
-	PolygonCollision() = default;
+	PolygonCollision();
 	virtual ~PolygonCollision() = default;
 
 	virtual void Draw(const FVector2& windowRect) const override;

@@ -26,6 +26,8 @@ public:
 
     virtual void OnOverlapObject(IObject* other, ICollisionComponent* component = nullptr, ICollisionComponent* otherComponent = nullptr) override;
 
+    virtual void OnBeginOverlap(IObject* other) override;
+
     void SetCarType(eCarType carType);
 
     void SetMovementSpeed(float speed) { m_MovementSpeed = speed; }

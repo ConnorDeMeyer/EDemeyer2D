@@ -4,12 +4,7 @@
 
 CircleCollision::CircleCollision()
 {
-	PHYSICS->RegisterCollisionComp(this);
-}
-
-CircleCollision::~CircleCollision()
-{
-	PHYSICS->RemoveCollisionComp(this);
+	m_CollisionType = eCollisionType::circle;
 }
 
 void CircleCollision::Draw(const FVector2& windowSize) const

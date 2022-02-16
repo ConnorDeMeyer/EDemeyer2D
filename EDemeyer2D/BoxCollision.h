@@ -7,7 +7,7 @@ class BoxCollision final : public ICollisionComponent
 public:
 
 	BoxCollision();
-	virtual ~BoxCollision();
+	virtual ~BoxCollision() = default;
 
 	virtual void Draw(const FVector2& windowSize) const override;
 

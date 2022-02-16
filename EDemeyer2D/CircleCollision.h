@@ -6,7 +6,7 @@ class CircleCollision final : public ICollisionComponent
 {
 public:
 	CircleCollision();
-	virtual ~CircleCollision();
+	virtual ~CircleCollision() = default;
 
 	virtual void Draw(const FVector2& windowSize) const override;
 

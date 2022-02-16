@@ -14,6 +14,7 @@ GameInstance_Frogger::GameInstance_Frogger()
 	RESOURCES->PermanentlyLoadBitmap(_T("Resources/Bitmaps/Frogger_Obstacles.png"));
 
 	SetCurrentScene(new Scene_Level());
+	//SetCurrentScene(new Scene_TitleScreen());
 
 	ENGINE->SetWindowResolution(224, 256);
 	ENGINE->SetWindowSize(3 * ENGINE->GetWindowResolution());

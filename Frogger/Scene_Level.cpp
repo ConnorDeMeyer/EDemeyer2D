@@ -59,7 +59,7 @@ void Scene_Level::Update(float deltaTime)
 
 	if (m_pPlayerCollision && IsOverlapping(m_pPlayerCollision->GetWorldBoundingRect(), m_WaterBounds))
 	{
-		auto collisions = m_pPlayerCollision->GetOverlappingCollisions();
+		auto collisions = PHYSICS->GetOverlappingComponents(m_pPlayerCollision);
 		bool killPlayer{true};
 		for (auto collision : collisions)
 		{

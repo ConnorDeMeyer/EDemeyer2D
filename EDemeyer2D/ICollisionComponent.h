@@ -4,13 +4,21 @@
 #include <forward_list>
 #include "Delegates.h"
 
+enum class eCollisionType : UINT8
+{
+	none = 0b0,
+	box = 0b1,
+	circle = 0b10,
+	polygon = 0b100
+};
+
 class ICollisionComponent : public IComponent
 {
 	friend class PhysicsManager;
 
 public:
-	ICollisionComponent() = default;
-	virtual ~ICollisionComponent() = default;
+	ICollisionComponent();
+	virtual ~ICollisionComponent();
 
 	/** Get the bounding box relative to local origin*/
 	const FRect& GetBoundingRect() const { return m_BoundingRect; }
@@ -20,14 +28,16 @@ public:
 
 	IDelegate<IObject*> OnCollision;
 
-	const std::forward_list<ICollisionComponent*>& GetOverlappingCollisions() { return m_OverlappingCollisions; }
+	size_t GetId() const { return m_Id; }
 
 protected:
 
 	FRect m_BoundingRect = {};
+	eCollisionType m_CollisionType{};
 
 private:
 	
-	std::forward_list<ICollisionComponent*> m_OverlappingCollisions;
+	size_t m_Id{};
+
 };
 

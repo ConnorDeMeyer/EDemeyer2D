@@ -40,6 +40,17 @@ void Car::OnOverlapObject(IObject* other, ICollisionComponent* component, IColli
 	}
 }
 
+void Car::OnBeginOverlap(IObject* other)
+{
+	IObject::OnBeginOverlap(other);
+
+	if (auto pPlayer = dynamic_cast<Frog*>(other))
+	{
+		pPlayer->Die();
+	}
+
+}
+
 void Car::SetCarType(eCarType carType)
 {
 	switch (carType)

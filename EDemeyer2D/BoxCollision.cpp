@@ -4,12 +4,7 @@
 
 BoxCollision::BoxCollision()
 {
-	PHYSICS->RegisterCollisionComp(this);
-}
-
-BoxCollision::~BoxCollision()
-{
-	PHYSICS->RemoveCollisionComp(this);
+	m_CollisionType = eCollisionType::box;
 }
 
 void BoxCollision::Draw(const FVector2& windowSize) const

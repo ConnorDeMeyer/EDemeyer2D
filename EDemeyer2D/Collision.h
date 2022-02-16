@@ -17,9 +17,9 @@ inline bool IsOverlapping(const FPoint2& point, const FRect& rect)
 	return !(point.x < rect.left || point.y < rect.top || point.x > rect.right || point.y > rect.bottom);
 }
 
-inline bool IsOverlapping(const FCircle& circleCenter0, const FCircle& circleCenter1)
+inline bool IsOverlapping(const FCircle& circle0, const FCircle& circle1)
 {
-	return (SqrDistance(circleCenter0.center, circleCenter1.center) < Square(circleCenter0.radius + circleCenter1.radius));
+	return (SqrDistance(circle0.center, circle1.center) < Square(circle0.radius + circle1.radius));
 }
 
 inline bool IsOverlapping(const FPoint2& point, const FCircle& circle)
@@ -27,9 +27,9 @@ inline bool IsOverlapping(const FPoint2& point, const FCircle& circle)
 	return SqrDistance(point, circle.center) < Square(circle.radius);
 }
 
-inline bool isOverlapping(const FRect& rect, const FCircle& circle)
+inline bool IsOverlapping(const FRect& rect, const FCircle& circle)
 {
-	auto x = std::clamp(circle.center.x, rect.left, rect.right) - circle.center.x;
-	auto y = std::clamp(circle.center.y, rect.top, rect.bottom) - circle.center.y;
+	auto x = Clamp(circle.center.x, rect.left, rect.right) - circle.center.x;
+	auto y = Clamp(circle.center.y, rect.top, rect.bottom) - circle.center.y;
 	return Square(x) + Square(y) <= Square(circle.radius);
 }
